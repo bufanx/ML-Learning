@@ -79,6 +79,7 @@ class LinearRegression:
 
                 i_iter += 1
 
+
             return theta
 
         X_b = np.hstack([np.ones((len(X_train), 1)), X_train])
