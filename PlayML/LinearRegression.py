@@ -1,4 +1,5 @@
 import numpy as np
+from PlayML.Metrics import r2_score
 
 
 class LinearRegression:
@@ -64,7 +65,7 @@ class LinearRegression:
                 res[i] = (J(theta_1, X_b, y) - J(theta_2, X_b, y)) / (2 * epsilon)
             return res
 
-        def gradient_descent(dJ,X_b, y, initial_theta, eta, n_iters=1e4, epsilon=1e-8):
+        def gradient_descent(X_b, y, initial_theta, eta, n_iters=1e4, epsilon=1e-8):
 
             theta = initial_theta
             i_iter = 0
@@ -78,7 +79,6 @@ class LinearRegression:
                     break
 
                 i_iter += 1
-
 
             return theta
 
@@ -124,6 +124,11 @@ class LinearRegression:
         self.interception_ = self._theta[0]
         self.coef_ = self._theta[1]
         return self
+
+    def score(self, X_test, y_test):
+        """确定模型当前准确度"""
+        y_predict = self.predict(X_test)
+        return r2_score(y_test, y_predict)
 
     def __repr__(self):
         return "LinearRegression()"
