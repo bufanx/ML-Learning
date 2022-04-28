@@ -12,7 +12,7 @@
 `
 ## 总的来说，这门课收获还是挺多的，但由于要去考研，无奈只能先挂起深度学习计划，等初试完，再激活，到时看一下李沐老师的《动手学深度学习》系列课程和阅读经典论文的课程
 
-### Wish everything will be bese！
+### Wish everything will be best！
 
 ![image](https://user-images.githubusercontent.com/55921960/140528375-bab058b4-26f8-49e4-aee4-956b41414bdb.png)
 
